@@ -3,6 +3,9 @@
     font-family: 'Jura', sans-serif;
 }
 
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 510px;
+}
     
 section {
     transition: transform 0.25s;
