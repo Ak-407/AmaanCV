@@ -463,6 +463,8 @@ body{
     background-color: white;
     width: 1000px;
     min-height: 300px;
+      padding: 50px !important;
+    border-radius: 90px !important;
     
     display: -webkit-box;
     
