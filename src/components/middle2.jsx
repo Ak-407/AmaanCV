@@ -11,7 +11,7 @@ function middle2(){return(<div>
 </svg>
     <hr/>
     <h2>Back-End Development</h2>
-    <p>Back-end development refers to the server-side of web development, which involves the development of the underlying systems and technologies that power a website or application. It includes the creation and management of databases, servers, and APIs that allow the front-end to function properly. Back-end developers work with languages such as Python, Ruby, Java, PHP, and .Net to build logic.</p>
+    <p>Back-end development refers to the server-side of web development, which involves the development of the underlying systems and technologies that power a website or application.</p>
     <hr/>
   </div>
 </div>
@@ -20,7 +20,7 @@ function middle2(){return(<div>
   <img src="/imeges/hacker (2).png" alt="h"></img>
     <hr/>
     <h2>Front-End Development</h2>
-    <p>Front-end development involves the design and development of the user interface and user experience of a website or application. It includes the use of HTML, CSS, and JavaScript to create the visual and interactive elements of a website or application. The goal of front-end development is to create a seamless and engaging experience for the user.</p>
+    <p>Front-end development involves the design and development of the user interface and user experience of a website or application. It includes the use of HTML, CSS, and JavaScript to create the visual website.</p>
     <hr/>
 </div>
 </div>
@@ -31,7 +31,7 @@ function middle2(){return(<div>
 </svg>
     <hr/>
     <h2>Web Security</h2>
-    <p>It takes 20 years to build a reputation and few minutes of cyber-incident to ruin it. Let me test your Web Application. API Penetration testing involves all processes of checking for vulnerabilities and building strong endpoints in your APIs. Internet security is a branch of computer security. It encompasses the Internet, browser security, web site security, and network security as it applies to other applications or operating systems as a whole. Its objective is to establish rules and measures to use against attacks over the Internet.</p>
+    <p>It takes 20 years to build a reputation and few minutes of cyber-incident to ruin it. Let me test your Web Application. API Penetration testing involves all processes of checking for vulnerabilities and building strong endpoints in your APIs.</p>
     <hr/>
   </div>
 </div>
@@ -40,7 +40,7 @@ function middle2(){return(<div>
   <img src="/imeges/image.jpg"></img>
     <hr/>
     <h2>Social Engineering</h2>
-    <p>Social engineering is the use of psychological manipulation to trick individuals into divulging sensitive information or performing actions. Social engineering training is designed to teach individuals how to recognize and defend against these tactics. The training typically includes information on the various types of social engineering, such as phishing, pretexting, and baiting, as well as strategies for staying vigilant and protecting personal and organizational information. It also includes practical simulations and exercises to help individuals identify and handle real-world social engineering attempts.</p>
+    <p>Social engineering is the use of psychological manipulation to trick individuals into divulging sensitive information or performing actions. Social engineering training is designed to teach individuals how to recognize and defend against these tactics.</p>
     <hr/>
   </div>
 </div>
@@ -52,7 +52,7 @@ function middle2(){return(<div>
 </svg>
     <hr/>
     <h2>C & C++</h2>
-    <p>C and C++ are two popular programming languages. C was developed in the 1970s and is widely used for system programming, embedded systems and game development. C++ was developed in the 1980s as an extension of C with object-oriented features. C++ is used for developing a wide range of applications, from desktop to web and mobile, as well as game development and high-performance computing. Both languages are considered low-level languages and are known for their efficiency and speed.</p>
+    <p>C and C++ are two popular programming languages. C was developed in the 1970s and is widely used for system programming, embedded systems and game development. C++ was developed in the 1980s as an extension of C with object-oriented features.</p>
     <hr/>
   </div>
 </div>
@@ -61,7 +61,7 @@ function middle2(){return(<div>
   <img src="/imeges/1174949_js_react js_logo_react_react native_icon (1).png" alt="Product" class="img-responsive" />
     <hr/>
     <h2>React</h2>
-    <p>React is a JavaScript library for building user interfaces. It was developed and is maintained by Facebook and is used for building single-page applications and mobile applications. React uses a component-based architecture, allowing developers to build UI components that can be easily reused and combined to build complex user interfaces. React uses a virtual DOM, which optimizes updates and rendering, making it fast and efficient. It is widely used by companies and developers for building scalable and dynamic web applications.</p>
+    <p>React is a JavaScript library for building user interfaces. It was developed and is maintained by Facebook and is used for building single-page applications and mobile applications.</p>
     <hr/>
   </div>
 </div>
