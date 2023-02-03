@@ -1688,6 +1688,7 @@ background: #e8d3fc;
     color: #fff;
     z-index: 1;
     font-size: 100px !important;
+    border-radius: 500px;
 }
 .overlay a {
     padding: 8px;
