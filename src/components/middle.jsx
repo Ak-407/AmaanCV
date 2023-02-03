@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 function middle(){
     return(<div>
-    <h1 className="M1">About Me</h1>
+    <Link to="/about"><h1 className="M1">About Me</h1></Link>
     <span>
     <p className="M1Para">
-    <Link to="/about"><h1 className="M1h1">Brief overview of myself</h1></Link>
+    <h1 className="M1h1">Brief overview of myself</h1>
         As a young individual, I was introduced to the world of technology through my first Windows laptop. 
         However, I found that I was not particularly interested in the typical activities such as gaming that many of my peers
         were engaged in. It was not until I was introduced to the powerful operating 
