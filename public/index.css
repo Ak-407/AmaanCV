@@ -1782,7 +1782,7 @@ background: #e8d3fc;
 
 
    .M3img {
-    margin-top: 380px;
+    margin-top: 780px;
     width: 1540px;
     height: 2080px;
     opacity: 40%;
@@ -1808,7 +1808,7 @@ background: #e8d3fc;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         position: relative;
-        top: -125px;
+        top: 260px;
         /* color: white; */
     }
     .M3i2 h1 {
