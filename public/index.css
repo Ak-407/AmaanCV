@@ -1635,6 +1635,7 @@ background: #e8d3fc;
     height: 300px;
     bottom: 0px;
     font-size: 74px;
+    border-radius: 500px;
     }
     .animation {
         height:100px;
