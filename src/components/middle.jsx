@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function middle(){
     return(<div>
-    <Link to="/about"><h1 className="M1">About Me</h1></Link>
+    <h1 className="M1">About Me</h1>
     <span>
     <p className="M1Para">
     <Link to="/about"><h1 className="M1h1">Brief overview of myself</h1></Link>
