@@ -3,9 +3,6 @@
     font-family: 'Jura', sans-serif;
 }
 
-.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 510px;
-}
     
 section {
     transition: transform 0.25s;
@@ -1597,6 +1594,8 @@ background: #e8d3fc;
     float: left;
     margin-left: 60px;
     margin-bottom: 70px;
+    max-width: 510px !imoprtant;
+}
 }
 .FEND2{
     float: right;
