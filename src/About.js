@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from "react-router-dom"
 
 
 
@@ -9,7 +10,7 @@ function About(){return(
  <div className='wrapper'>
  <div className='hheader' >
  <img src='/imeges/amaan.jpeg' className='back'></img>
- <h1 className='first'>About Me</h1>
+ <Link to="/"><h1 className='first'>About Me</h1></Link>
  </div>
  <div className='Th3'>
  <h3>As a young individual, I was introduced to the world of technology through my first Windows laptop. However, I found that I was not particularly interested in the typical activities such as gaming that many of my peers were engaged in. It was not until I was introduced to the powerful operating system, Kali Linux, by a friend who is now a full stack web developer, that I truly discovered my passion for technology. Through utilizing Kali Linux, I was able to gain a deeper understanding of the inner workings of technology and the potential it holds. I found myself drawn to activities such as cracking passwords and phishing, as well as exploring the dark web. It was through these experiences that I came to realize that computer engineering was the field that aligns with my interests and skillset. This led to my decision to pursue a career in computer engineering.</h3>
@@ -114,7 +115,7 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
     <dev className="F1R">
     <hr style={{color:"white"}}></hr>
     <hr style={{color:"white"}}></hr>
-    <p>Your developing partner ;)</p> 
+    <Link to="/"><p>Your developing partner ;)</p></Link>
 
     <h1>I offer freelance services on a project basis, providing exceptional and professional solutions to meet client needs.</h1>
     <hr style={{color:"white"}}></hr>
