@@ -16,8 +16,8 @@ function first(){
   <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
   <div class="overlay-content">
   <Link to="/about">About</Link>
-  <Link to="/contact">Services</Link>
-  <Link to="/contact">Contact</Link>
+  <a href="https://ak-407.github.io/Contact-Me/" target="_blank" rel="noopener noreferrer">Services</a>
+  <a href="https://ak-407.github.io/Contact-Me/" target="_blank" rel="noopener noreferrer">Contact</a>
   </div>
 </div>
 
