@@ -2207,8 +2207,8 @@ background: #e8d3fc;
     background-color:transparent;
   }
 .containerr{
-    width: 1570px;
-    padding: 0px 100px;
+    width: 1470px;
+    padding: 0px 0 0 60px;
     min-height: 90vh;  
     display: -webkit-box;  
     display: -ms-flexbox;  
