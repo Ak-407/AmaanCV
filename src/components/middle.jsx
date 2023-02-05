@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 function middle(){
-    return(<div>
+    return(<div data-aos="fade-in">
     <Link to="/about"><h1 className="M1">About Me</h1></Link>
     <span>
     <p className="M1Para">
@@ -22,20 +22,20 @@ function middle(){
     <span id="M1Progress">
     <br></br>
     <br></br>
-    <h1 className="M1h1">Front-End Development</h1>
-    <div class="progress">
+    <h1 className="M1h1" data-aos="fade-in">Front-End Development</h1>
+    <div class="progress" data-aos="fade-in">
     <div class="progress-bar w-75 progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <hr></hr>
     <hr></hr>
-    <h1 className="M1h1">Back-End Development</h1>
-    <div class="progress">
+    <h1 className="M1h1" data-aos="fade-in">Back-End Development</h1>
+    <div class="progress" data-aos="fade-in">
     <div class="progress-bar w-75 progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <hr></hr>
     <hr></hr>
-    <h1 className="M1h1">Ethical Hacking</h1>
-    <div class="progress">
+    <h1 className="M1h1" data-aos="fade-in">Ethical Hacking</h1>
+    <div class="progress" data-aos="fade-in">
     <div class="progress-bar w-75 progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <hr></hr>
