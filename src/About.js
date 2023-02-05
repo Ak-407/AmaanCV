@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 function About(){return(
 
-  <div  className='secondroute'>
+  <div  className='secondroute' data-aos="fade-in">
  <div className='wrapper'>
  <div className='hheader' >
  <img src='/imeges/amaan.jpeg' className='back'></img>
