@@ -1435,10 +1435,10 @@ background: #e8d3fc;
 .btn-shine{
     width: 996px;
     position: relative;
-    left: 650px;
+    left: 730px;
     top: 80px;
     transform: translate(-50%,-50%);
-    padding: 12px 48px;
+    padding: 12px 8px;
     color: #ffffff;
     background: linear-gradient(to right, #9B9A9C 20%,#03C8A8);
     background-position: 0;
