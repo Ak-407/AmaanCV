@@ -641,6 +641,7 @@ body{
     top: 40px;
     color: #fff;
     font-size: 30px;
+    cursor: grab;
 }
 .overlay {
     height: 100%;
