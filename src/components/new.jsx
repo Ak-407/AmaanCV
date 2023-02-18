@@ -43,6 +43,27 @@ const PageReloader = () => {
           <h1>Loading...</h1>
           <img src='https://media2.giphy.com/media/3AMRa6DRUhMli/200w.webp?cid=ecf05e4742vojp4b3a51j21uw92tz2x2oxbuerldj8189iiu&rid=200w.webp&ct=g'></img>
           </div>
+    <div className='mobile-load'>
+          <svg
+    width="400"
+    height="400"
+    viewBox="0 0 40 60"
+  >
+    <polygon
+      class="triangle"
+      fill="none"
+      stroke="white"
+      stroke-width="1"
+      points="16,1 32,32 1,32"
+    />
+    <text
+      class="loading"
+      fill="white"
+      x="0"
+      y="45"
+    >Loading...</text>
+  </svg>
+          </div>
     
     </div>
         </div>
