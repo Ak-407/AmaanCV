@@ -390,6 +390,19 @@ body{
     z-index: 9;
 }
 
+.loadeer{
+  margin-top: 10%;
+  display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:137px;
+}
+.loader-container svg{
+  height: 300px;
+  width: 1300px;
+}
+
 .spinner {
     position: fixed;
     width: 69px;
@@ -2423,7 +2436,13 @@ header {
 
 /* /////////////////////////////////////////////////////////////////////////frnddddd/////////////////// */
 
-
+.loadeer{
+  opacity: 0;
+}
+.loader-container{
+  font-size: 197px;
+  opacity: 0;
+}
 
 
 
