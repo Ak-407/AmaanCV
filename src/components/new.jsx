@@ -40,7 +40,7 @@ const PageReloader = () => {
   <text text-anchor="middle" x="50%" y="70%" className='LF'  fill="url(#gradient)" fill-opacity="0.1">Syed Amaan</text>
 </svg>
 
-          <h1>Welcome...</h1>
+          <h1>Loading...</h1>
           <img src='https://media2.giphy.com/media/3AMRa6DRUhMli/200w.webp?cid=ecf05e4742vojp4b3a51j21uw92tz2x2oxbuerldj8189iiu&rid=200w.webp&ct=g'></img>
           </div>
     
