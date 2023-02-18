@@ -425,7 +425,7 @@ body{
 }
 .mobile-load{
   position: absolute;
-  bottom: 0;
+  bottom: 240px;
   left: 0;
 
   opacity: 0;
