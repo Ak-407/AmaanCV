@@ -402,6 +402,23 @@ body{
   height: 300px;
   width: 1300px;
 }
+.triangle {
+  stroke-dasharray: 17;
+  animation: dash 2.5s cubic-bezier(.35,.04,.63,.95) infinite;
+}
+
+.loading {
+  font-size: 7px;
+  font-family: 'Orbitron', sans-serif;
+  animation: blink .9s ease-in-out infinite;
+}
+.mobile-load{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+}
 
 .spinner {
     position: fixed;
@@ -2442,6 +2459,9 @@ header {
 .loader-container{
   font-size: 197px;
   opacity: 0;
+}
+    .mobile-load{
+  opacity: 1;
 }
 
 
