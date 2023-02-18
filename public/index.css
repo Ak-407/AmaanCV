@@ -412,6 +412,17 @@ body{
   font-family: 'Orbitron', sans-serif;
   animation: blink .9s ease-in-out infinite;
 }
+@keyframes dash {
+  to {
+    stroke-dashoffset: 136
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 .mobile-load{
   position: absolute;
   bottom: 0;
