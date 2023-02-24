@@ -1131,6 +1131,7 @@ body{
     opacity: 40%;
     text-align: center;
     float: left;
+    background-color: transparent;
 }
 .M3i11{
     position: relative;
