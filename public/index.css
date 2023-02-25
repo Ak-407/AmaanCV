@@ -8170,33 +8170,7 @@ header {
   color: #222;
 }
 
-.navbar-link:nth-child(1) {
-  top: 2rem;
-}
 
-.navbar-link:nth-child(2) {
-  top: 5rem;
-  right: 2rem;
-}
-
-.navbar-link:nth-child(3) {
-  bottom: 5rem;
-  right: 2rem;
-}
-
-.navbar-link:nth-child(4) {
-  bottom: 2rem;
-}
-
-.navbar-link:nth-child(5) {
-  bottom: 5rem;
-  left: 2rem;
-}
-
-.navbar-link:nth-child(6) {
-  top: 5rem;
-  left: 2rem;
-}
 
 .navbar-btn {
   margin-top: 540px;
