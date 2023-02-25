@@ -178,7 +178,7 @@ const PageReloader = () => {
   <div class="particle particle911"></div>
 </div>
 
-          <img src='https://media2.giphy.com/media/3AMRa6DRUhMli/200w.webp?cid=ecf05e4742vojp4b3a51j21uw92tz2x2oxbuerldj8189iiu&rid=200w.webp&ct=g'></img>
+          
           </div>
           <div className='mobile-load'>
           <svg
