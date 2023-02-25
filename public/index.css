@@ -59,6 +59,7 @@ section {
   
   .navbar-link:nth-child(1) {
     top: 2rem;
+      right:50%;
   }
   
   .navbar-link:nth-child(2) {
@@ -73,6 +74,7 @@ section {
   
   .navbar-link:nth-child(4) {
     bottom: 2rem;
+      right:50%;
   }
   
   .navbar-link:nth-child(5) {
