@@ -7852,14 +7852,6 @@ background: #e8d3fc;
     margin-top: -5px;
     width: 1570px;
     height: 160vh;
-    position: fixed !important;
-    background: rgba(0, 0, 0, 0.834)
-        /* "https://media0.giphy.com/media/tA4R6biK5nlBVXeR7w/giphy.gif?cid=ecf05e47a9cx2afigipwua5zq4ye1sm02pbxvzchetj1wxc7&rid=giphy.gif&ct=g"*/
-          url("https://media3.giphy.com/media/bJ4TVNYNUympPgcpem/giphy.gif?cid=ecf05e475mg4jei0hilrktsw41xhg8ysgewg22xunzr97fvz&rid=giphy.gif&ct=g")center 
-        no-repeat;
-        opacity: 1 !important;
-        background-color: #000000 !important;
-    z-index: 9 !important;
 }
 
 @keyframes spin-anim {
