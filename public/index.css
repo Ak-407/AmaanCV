@@ -5806,7 +5806,10 @@ body{
 .loader-container {
     margin-top: -14px;
     width: 100%;
-    height: 110vh;
+    height: 120vh;
+    position: fixed;
+        opacity: 1 !important;
+        background-color: #000000 !important;
     z-index: 9;
 }
 
