@@ -7905,7 +7905,7 @@ header {
           opacity: 0% !important;
 }
 .text0 {
-  left: -580px;
+  left: -620px;
   top: 0;
   -webkit-animation: text-animation0 1s ease-in-out 1s 1 normal forwards, text2-animation0 1s ease-in-out 500s 100 normal forwards;
           animation: text-animation0 1s ease-in-out 1s 1 normal forwards, text2-animation0 1s ease-in-out 500s 100 normal forwards;
@@ -7915,7 +7915,7 @@ header {
           animation: text-after-animation0 1s ease-in-out 2s 1 normal forwards;
 }
 .text1 {
-  left: -460px;
+  left: -500px;
   top: 0;
   -webkit-animation: text-animation1 1s ease-in-out 1.2s 1 normal forwards, text2-animation1 1s ease-in-out 500s 100 normal forwards;
           animation: text-animation1 1s ease-in-out 1.2s 1 normal forwards, text2-animation1 1s ease-in-out 500s 100 normal forwards;
@@ -7925,7 +7925,7 @@ header {
           animation: text-after-animation1 1s ease-in-out 2s 1 normal forwards;
 }
 .text2 {
-  left: -340px;
+  left: -370px;
   top: 0;
   -webkit-animation: text-animation2 1s ease-in-out 1.4s 1 normal forwards, text2-animation2 1s ease-in-out 500s 100 normal forwards;
           animation: text-animation2 1s ease-in-out 1.4s 1 normal forwards, text2-animation2 1s ease-in-out 500s 100 normal forwards;
@@ -7935,7 +7935,7 @@ header {
           animation: text-after-animation2 1s ease-in-out 2s 1 normal forwards;
 }
 .text3 {
-  left: -240px;
+  left: -260px;
   top: 0;
   -webkit-animation: text-animation3 1s ease-in-out 1.6s 1 normal forwards, text2-animation3 1s ease-in-out 500s 100 normal forwards;
           animation: text-animation3 1s ease-in-out 1.6s 1 normal forwards, text2-animation3 1s ease-in-out 500s 100 normal forwards;
