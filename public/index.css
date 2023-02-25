@@ -59,11 +59,11 @@ section {
   
   .navbar-link:nth-child(1) {
     top: 2rem;
-      right:70%;
+      right:40%;
   }
   
   .navbar-link:nth-child(2) {
-    top: 9rem;
+    top: 20rem;
     right: 2rem;
   }
   
@@ -74,11 +74,11 @@ section {
   
   .navbar-link:nth-child(4) {
     bottom: 2rem;
-      right:70%;
+      right:40%;
   }
   
   .navbar-link:nth-child(5) {
-    bottom: 9rem;
+    bottom: 20rem;
     left: 2rem;
   }
   
