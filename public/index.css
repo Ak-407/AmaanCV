@@ -8,6 +8,130 @@ section {
     transition: transform 0.25s;
     will-change: transform;
   }
+
+
+.navbar-wrapper {
+    width: 100%;
+    height: 50vh;
+    background-color: transparent;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    color: #ff6b6b;
+  }
+  
+  .navbar {
+    width: 40rem;
+    height: 40rem;
+    background-color: #6a7fdb;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform .5s;
+    transform: scale(0) rotate(-180deg);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .23);
+  }
+  
+  .change .navbar {
+    transform: scale(1) rotate(0);
+  }
+  
+  .navbar-link {
+    position: absolute;
+  }
+  
+  .navbar-link i {
+    font-size: 6rem;
+    background-color: transparent;
+    color: #fff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);;
+    transition: color .3s;
+  }
+  
+  .navbar-link:hover i {
+    color: #222;
+  }
+  
+  .navbar-link:nth-child(1) {
+    top: 2rem;
+  }
+  
+  .navbar-link:nth-child(2) {
+    top: 5rem;
+    right: 2rem;
+  }
+  
+  .navbar-link:nth-child(3) {
+    bottom: 5rem;
+    right: 2rem;
+  }
+  
+  .navbar-link:nth-child(4) {
+    bottom: 2rem;
+  }
+  
+  .navbar-link:nth-child(5) {
+    bottom: 5rem;
+    left: 2rem;
+  }
+  
+  .navbar-link:nth-child(6) {
+    top: 5rem;
+    left: 2rem;
+  }
+  
+  .navbar-btn {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #ff6b6b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .23);
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+  }
+  
+  .navbar-btn:hover {
+    animation-name: none;
+  }
+  
+  .navbar-btn i {
+    font-size: 4rem;
+    background-color: transparent;
+    color: #fff;
+    transition: transform .5s;
+  }
+  
+  .change .navbar-btn i {
+    transform: rotate(45deg);
+  }
+  
+  @keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    40% {
+      transform: translateY(-30px);
+    }
+    
+    60% {
+      transform: translateY(-15px);
+    }
+  }
 /* //////////////////////////////////////////////////bootstrap ///////////////// */
 .M3i11{
     height: 0px;
@@ -7994,6 +8118,131 @@ header {
   -webkit-animation: text-after-animation8 1s ease-in-out 2s 1 normal forwards;
           animation: text-after-animation8 1s ease-in-out 2s 1 normal forwards;
 }
+    
+    .navbar-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  color: #ff6b6b;
+}
+
+.navbar {
+  margin-top: 510px;
+  width: 100rem;
+  height: 100rem;
+  left: 250px;
+  background-color: #6a7fdb;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform .5s;
+  transform: scale(0) rotate(-180deg);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .23);
+}
+
+.change .navbar {
+  transform: scale(1) rotate(0);
+}
+
+.navbar-link {
+  position: absolute;
+}
+
+.navbar-link i {
+  font-size: 15rem;
+  background-color: transparent;
+  color: #fff;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);;
+  transition: color .3s;
+}
+
+.navbar-link:hover i {
+  color: #222;
+}
+
+.navbar-link:nth-child(1) {
+  top: 2rem;
+}
+
+.navbar-link:nth-child(2) {
+  top: 5rem;
+  right: 2rem;
+}
+
+.navbar-link:nth-child(3) {
+  bottom: 5rem;
+  right: 2rem;
+}
+
+.navbar-link:nth-child(4) {
+  bottom: 2rem;
+}
+
+.navbar-link:nth-child(5) {
+  bottom: 5rem;
+  left: 2rem;
+}
+
+.navbar-link:nth-child(6) {
+  top: 5rem;
+  left: 2rem;
+}
+
+.navbar-btn {
+  margin-top: 540px;
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  left: 600px;
+  background-color: #ff6b6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .23);
+  animation-name: bounceIn;
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-iteration-count: infinite;
+}
+
+.navbar-btn:hover {
+  animation-name: none;
+}
+
+.navbar-btn i {
+  font-size: 20rem;
+  color: #fff;
+  transition: transform .5s;
+}
+
+.change .navbar-btn i {
+  transform: rotate(45deg);
+}
+
+@keyframes bounceIn {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  40% {
+    transform: translateY(-30px);
+  }
+  
+  60% {
+    transform: translateY(-15px);
+  }
 
 
 
