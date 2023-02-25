@@ -8201,6 +8201,35 @@ header {
   color: #fff;
   transition: transform .5s;
 }
+     .navbar-link:nth-child(1) {
+    top: 2rem;
+      right:40%;
+  }
+  
+  .navbar-link:nth-child(2) {
+    top: 13rem;
+    right: 2rem;
+  }
+  
+  .navbar-link:nth-child(3) {
+    bottom: 5rem;
+    right: 2rem;
+  }
+  
+  .navbar-link:nth-child(4) {
+    bottom: 2rem;
+      right:40%;
+  }
+  
+  .navbar-link:nth-child(5) {
+    bottom: 10rem;
+    left: 2rem;
+  }
+  
+  .navbar-link:nth-child(6) {
+    top: 5rem;
+    left: 2rem;
+  }
 
 .change .navbar-btn i {
   transform: rotate(45deg);
