@@ -63,7 +63,7 @@ section {
   }
   
   .navbar-link:nth-child(2) {
-    top: 20rem;
+    top: 13rem;
     right: 2rem;
   }
   
@@ -78,7 +78,7 @@ section {
   }
   
   .navbar-link:nth-child(5) {
-    bottom: 20rem;
+    bottom: 10rem;
     left: 2rem;
   }
   
