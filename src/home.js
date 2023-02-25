@@ -6,6 +6,7 @@ import Middle2 from './components/middle2';
 import Middle3 from './components/middle3';
 import Middle4 from './components/middle4';
 import Footer1 from './components/footer1';
+import Projects from './components/project';
 import Footer from './components/footer';
 import PageReloader from './components/new';
 import App from './components/contact'
@@ -27,6 +28,7 @@ const Home = () =>{return(
 <First  />
 <Head />
 <Middle />
+<Projects/>
 <Middle3 />
 <Middle2 />
 <Middle4 />
