@@ -8207,13 +8207,13 @@ header {
   }
   
   .navbar-link:nth-child(2) {
-    top: 13rem;
-    right: 2rem;
+    top: 17rem;
+    right: 0rem;
   }
   
   .navbar-link:nth-child(3) {
-    bottom: 5rem;
-    right: 2rem;
+    bottom: 12rem;
+    right: 0rem;
   }
   
   .navbar-link:nth-child(4) {
@@ -8223,12 +8223,12 @@ header {
   
   .navbar-link:nth-child(5) {
     bottom: 10rem;
-    left: 2rem;
+    left: 16%;
   }
   
   .navbar-link:nth-child(6) {
-    top: 5rem;
-    left: 2rem;
+    top: 15rem;
+    left: 9rem;
   }
 
 .change .navbar-btn i {
