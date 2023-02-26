@@ -8202,33 +8202,33 @@ header {
   transition: transform .5s;
 }
      .navbar-link:nth-child(1) {
-    top: 2rem;
+    top: 9rem;
       right:40%;
   }
   
   .navbar-link:nth-child(2) {
-    top: 17rem;
-    right: 0rem;
+    top: 27rem;
+    right: -8rem;
   }
   
   .navbar-link:nth-child(3) {
-    bottom: 12rem;
-    right: 0rem;
+    bottom: 22rem;
+    right: -17rem;
   }
   
   .navbar-link:nth-child(4) {
-    bottom: 2rem;
+    bottom: 9rem;
       right:40%;
   }
   
   .navbar-link:nth-child(5) {
-    bottom: 10rem;
-    left: 16%;
+    bottom: 22rem;
+    left: 24%;
   }
   
   .navbar-link:nth-child(6) {
-    top: 15rem;
-    left: 9rem;
+    top: 22rem;
+    left: 20%;
   }
 
 .change .navbar-btn i {
