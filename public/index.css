@@ -8207,12 +8207,12 @@ header {
   }
   
   .navbar-link:nth-child(2) {
-    top: 22rem;
+    top: 32rem;
     right: 17%;
   }
   
   .navbar-link:nth-child(3) {
-    bottom: 22rem;
+    bottom: 32rem;
     right: 17%;
   }
   
@@ -8222,12 +8222,12 @@ header {
   }
   
   .navbar-link:nth-child(5) {
-    bottom: 22rem;
+    bottom: 32rem;
     left: 17%;
   }
   
   .navbar-link:nth-child(6) {
-    top: 22rem;
+    top: 32rem;
     left: 17%;
   }
 
