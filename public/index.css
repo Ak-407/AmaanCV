@@ -7528,6 +7528,20 @@ background: #e8d3fc;
         --bs-progress-height: -9px !important;
     }
    /* ///////////////////////////////////////////////////////// */
+    
+    .login-box{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.Hcontainer .HCF {
+  opacity: 0;
+  display: none;
+  height: 100%;
+  margin-top: 0;
+  flex-direction: row;
+  margin-right: 0;
+}
 
 
    .M3img {
@@ -8405,19 +8419,7 @@ header {
     transform: translateY(-15px);
   }
 
-.login-box{
-    opacity: 0;
-    height: 0;
-    width: 0;
-}
-.Hcontainer .HCF {
-  opacity: 0;
-  display: none;
-  height: 100%;
-  margin-top: 0;
-  flex-direction: row;
-  margin-right: 0;
-}
+
 
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////     */
