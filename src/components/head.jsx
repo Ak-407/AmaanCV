@@ -34,18 +34,25 @@ let currentPixel = window.pageYOffset
 {window.addEventListener('scroll', function(){
 this.looper();})}
         <main class="Hcontainer">
-  <p>Hello 👋 I'm</p>
+<div className="HCF"><img src="/imeges/code (1).png"></img></div>
+<div><p>Hello 👋 I'm</p>
   <section class="animation">
     <div class="Hfirst"><div>Syed Amaan</div></div>
     <div class="Hsecond"><div>Full Stack Engineer</div></div>
     <div class="Hthird"><div>Systems Engineer</div></div>
-  </section>
+  </section></div>
+  <div class="login-box">
+  <form>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Explore
+    </a>
+  </form>
+</div>
 </main>
-        {/* <h1 className="FHead">
-        Hello I Amaan Iqbal.
-        <hr></hr>
-        Am a Full Stack Engineer.
-        </h1> */}
 </span>
     </div>
     </div>
