@@ -131,7 +131,7 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
 
 
     </dev>
-    </div>
+    
   {/* /////////// */}
   <dev className="F00">
     
@@ -148,6 +148,7 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
 
 
     </dev>
+    </div>
   
   {/* /////////// */}
 
