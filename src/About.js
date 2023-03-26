@@ -4,11 +4,14 @@ import { Link } from "react-router-dom"
 
 
 
-function About(){return(
+function About(){return(<div data-aos="fade-in">
 
-  <div  className='secondroute' data-aos="fade-in">
+
+
+  <div  className='secondroute'>
  <div className='wrapper'>
  <div className='hheader' >
+
  <img src='/imeges/amaan.jpeg' className='back'></img>
  <Link to="/"><h1 className='first'>About Me</h1></Link>
  </div>
@@ -129,7 +132,6 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
 
     </dev>
     </div>
-    
   {/* /////////// */}
   <dev className="F00">
     
@@ -138,8 +140,8 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
 <div className="F0011"><h4><a style={{color:"white"}} href="https://www.linkedin.com/in/syed-amaan-88b250226/">Github</a></h4></div>
 <div className="F0012"><h4><a style={{color:"white"}} href="https://www.instagram.com/amaan_3k/">linkedin</a></h4></div>
 <div className="F0013"><h4><a style={{color:"white"}} href="https://github.com/Ak-407">Instagram</a></h4></div>
-</div>
 
+</div>
 <div className="F002">
 <h4>2023 © Made with ♥ by Amaan Iqbal</h4>
 </div>
