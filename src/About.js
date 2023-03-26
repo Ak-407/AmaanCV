@@ -124,10 +124,11 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
     <dev className="F2R" class="wrap">
     <a href="mailto:amaaniqbal3k@gmail.com"><button class="buttonF2">Lets Talk</button></a>
     </dev>
-</div>
+
 
 
     </dev>
+    </div>
     
   {/* /////////// */}
   <dev className="F00">
@@ -148,7 +149,7 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
   
   {/* /////////// */}
 
-
+</div>
   
   </div>)}
 
