@@ -128,7 +128,7 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
 
 
     </dev>
-    </div>
+    
   {/* /////////// */}
   <dev className="F00">
     
@@ -142,7 +142,7 @@ It can be daunting to take on a challenge or pursue a goal that may seem impossi
 <div className="F002">
 <h4>2023 © Made with ♥ by Amaan Iqbal</h4>
 </div>
-
+</div>
 
     </dev>
   
