@@ -2,7 +2,7 @@ import React from "react"
 
 
 function projects(){
-//     document.querySelector('.navbar-btn')
+//   n  document.querySelector('.navbar-btn')
 // .addEventListener('click', () => {
   
   
