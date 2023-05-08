@@ -40,7 +40,7 @@ function middle4(){
 </tabel>
     <div class="carousel-inner">
       <div class="carousel-item active">
-       {/* x <img src="/ss/2.png" alt="1"></img>
+       {/* x <img src="/ss/2.png" alt="e1"></img>
       </div>
       <div class="carousel-item">
         <h1>Education</h1>
