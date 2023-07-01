@@ -3,36 +3,13 @@ import $ from "jquery";
 
 
 function head(){
-  
-  const section = document.querySelector("section");
-let currentPixel = window.pageYOffset
-  const looper = function () {
-    const newPixel = window.pageYOffset;
-    const diff = newPixel - currentPixel
-    const speed = diff * 0.35;
-    
-    section.style.transform = "skewY(" + speed + "deg)"
-    
-    
-    currentPixel = newPixel;
-    
-    requestAnimationFrame(looper)
-  }
-  
-  
     return(<div id="HHH" className='scroll-wrapper '>
     <div className="scroll-wrapper2">
     <span id="PHead" >
         {/* <img id="PHead" src="/imeges/P_20221211_154157-05.jpeg" alt="amaan"></img> */}
-        {window.addEventListener('scroll', function(){
-         this.document.getElementById("PHead").style.backgroundSize =200 -  +window.pageYOffset/60+"%";
-         this.document.getElementById("PHead").style.opacity =95 -  +window.pageYOffset/100+"%";
-         this.looper();
-     })}
+        
 </span>
 <span>
-{window.addEventListener('scroll', function(){
-this.looper();})}
         <main class="Hcontainer">
 <div className="HCF"><img src="/imeges/code (1).png"></img></div>
 <div><p>Hello 👋 I'm</p>
@@ -44,11 +21,16 @@ this.looper();})}
   <div class="login-box">
   <form>
     <a href="https://syedamaan.vercel.app/about">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Explore
+    <div class="animate">
+<svg viewBox="45 60 400 320" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#fff" d="M 90 210 C 90 180 90 150 90 150 C 150 150 180 150 180 150 C 180 150 300 150 300 150 C 300 150 330 150 390 150 C 390 150 390 180 390 210 C 390 240 390 270 390 270 C 330 270 300 270 300 270 C 300 270 180 270 180 270 C 180 270 150 270 90 270 C 90 270 90 240 90 210" mask="url(#knockout-text)" >
+    </path>
+    <mask id="knockout-text">
+      <rect width="100%" height="100%" fill="#fff" x="0" y="0" />
+      <text x="42%" y="70%" font-size="35">Explore</text>
+    </mask>
+</svg>
+</div>
     </a>
   </form>
 </div>
