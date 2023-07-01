@@ -10,72 +10,14 @@ section {
   }
 
 
-.login-box{
-  margin-top: 00px;
-}
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-}
-
-.login-box .user-box {
-  position: relative;
-}
-
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
 
 
 
-.login-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-}
 
-.login-box a:hover {
-  background: #03e9f4;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
-}
 
-.login-box a span {
-  position: absolute;
-  display: block;
-}
 
-.login-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
-}
+
+
 
 @keyframes btn-anim1 {
   0% {
@@ -86,15 +28,7 @@ section {
   }
 }
 
-.login-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
-}
+
 
 @keyframes btn-anim2 {
   0% {
@@ -105,15 +39,7 @@ section {
   }
 }
 
-.login-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
-}
+
 
 @keyframes btn-anim3 {
   0% {
@@ -124,15 +50,7 @@ section {
   }
 }
 
-.login-box a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
-}
+
 
 @keyframes btn-anim4 {
   0% {
@@ -7345,7 +7263,7 @@ background: #e8d3fc;
     margin-bottom: 70px;
     max-width: 510px !important;
 }
-}
+
 .FEND2{
     float: right;
     margin-right: 40px;
@@ -7356,12 +7274,51 @@ background: #e8d3fc;
     font-size: 18px;
     color: white !important;
 }
+body .animate svg {
+  cursor: pointer;
+  position: relative;
+  color: white;
+  width: 40vw;
+  height: 150px;
+  top: 15vh;
+  left: 15vw;
+  max-width: 430px;
+  transform: translateY(-50%) translateX(-50%);
+}
+body .animate svg path {
+  cursor: pointer;
+  animation: blob 2.5s linear infinite alternate;
+  transform-origin: 50% 50%;
+  transition: all 0.75s ease-in-out;
+}
+body .animate svg path:hover{
+  cursor: pointer;
+  animation: blob 0.5s linear infinite alternate;
+  transform-origin: 50% 50%;
+  transition: all 0.5s ease-in-out;
+  border: 3px solid red;
+  border-radius: 10px 10px 20px 40px red;
+}
+
+@keyframes blob {
+  25% {
+    d: path("M 90 210 C 90 180 110 160 130 160 C 160 160 180 140 200 130 C 230 120 270 100 290 140 C 310 170 340 100 360 140 C 370 160 390 180 390 210 C 390 240 380 290 350 280 C 330 270 300 280 280 290 C 260 300 230 300 220 290 C 200 270 160 310 140 280 C 130 260 90 240 90 210 ");
+  }
+  50% {
+    d: path("M 90 210 C 90 180 100 150 120 130 C 150 100 180 140 200 130 C 230 120 270 100 290 140 C 300 160 330 130 360 140 C 390 150 390 180 390 210 C 390 240 380 300 350 280 C 330 270 320 230 280 260 C 260 280 220 310 200 290 C 180 270 160 280 140 280 C 110 280 90 240 90 210");
+  }
+  75% {
+    d: path("M 90 210 C 90 180 110 160 130 160 C 160 160 180 140 200 130 C 230 120 270 100 290 140 C 310 170 340 100 360 140 C 370 160 390 180 390 210 C 390 240 380 290 350 280 C 330 270 300 280 280 290 C 260 300 230 300 220 290 C 200 270 160 310 140 280 C 130 260 90 240 90 210 ");
+  }
+}
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media (min-width: 900px) and (max-width: 1200px) {
     
     #PHead{
+    position:relative;
+    box-shadow: rgba(254, 254, 254, 0.984) 0px 25px 50px -12px;
         background-color: rgb(0, 0, 0);
        width: 1579px;
         height: 3000px;
@@ -8425,4 +8382,4 @@ header {
 
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////     */
-}
+}}
