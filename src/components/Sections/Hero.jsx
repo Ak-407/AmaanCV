@@ -61,11 +61,15 @@ const Hero = () => {
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-20 md:mt-0">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-16 md:gap-32"
-        >
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="
+    mt-[68px] flex items-center flex-col-reverse flex-nowrap
+    md:mt-0 md:flex-row md:items-center md:justify-between
+    relative z-10 gap-16 md:gap-32
+  "
+>
           {/* ---------------- LEFT TEXT SIDE ---------------- */}
           <div className="text-center md:text-left max-w-xl">
             <motion.h1
