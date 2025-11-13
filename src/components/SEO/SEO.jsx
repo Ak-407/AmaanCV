@@ -7,8 +7,8 @@ const SEO = ({
   description = "Professional portfolio of Amaan, Full Stack Developer, Cyber Security Enthusiast, and founder of JKStream startup. Expert in React, Node.js, ethical hacking, and web security.",
   keywords = "amaan hacker, jkstream startup, full stack developer, cyber security, ethical hacking, react developer, node.js, web security, portfolio",
   author = "Amaan",
-  url = "https://yourportfolio.com",
-  image = "https://yourportfolio.com/og-image.jpg",
+  url = "https://miramaan.vercel.app/",
+  image = "https://miramaan.vercel.app/imeges/amaan.jpeg",
   type = "website"
 }) => {
   return (
@@ -45,7 +45,7 @@ const SEO = ({
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Amaan",
-          "url": "https://yourportfolio.com",
+          "url": "https://miramaan.vercel.app/",
           "description": "Full Stack Developer & Cyber Security Expert",
           "jobTitle": "Full Stack Developer",
           "knowsAbout": [
