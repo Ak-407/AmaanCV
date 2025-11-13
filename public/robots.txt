@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourportfolio.com/sitemap.xml
+Sitemap: https://miramaan.vercel.app/sitemap.xml
