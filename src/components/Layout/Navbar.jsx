@@ -40,7 +40,7 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <motion.div
@@ -110,7 +110,7 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="block text-[#ECF4E8]/80 hover:text-[#CBF3BB] px-4 py-2 transition-colors duration-300"
+                className="block text-[#ECF4E8]/80 hover:text-[#CBF3BB] px-6 py-2 transition-colors duration-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
