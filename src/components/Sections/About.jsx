@@ -74,7 +74,7 @@ const About = () => {
             variants={itemVariants}
             className="relative"
           >
-            <div className="hidden sm:block bg-gradient-to-br from-[#CBF3BB]/20 to-[#93BFC7]/20 rounded-2xl p-8 backdrop-blur-sm border border-[#ABE7B2]/10">
+            <div className="bg-gradient-to-br from-[#CBF3BB]/20 to-[#93BFC7]/20 rounded-2xl p-8 backdrop-blur-sm border border-[#ABE7B2]/10">
               <div className="grid grid-cols-2 gap-4">
                 {['AI / ML', 'Django', 'Python', 'Authentication'].map((tech, index) => (
                   <motion.div
@@ -116,7 +116,7 @@ const About = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-[#CBF3BB] to-[#ABE7B2] rounded-2xl rotate-12 opacity-20"
+              className="hidden sm:block absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-[#CBF3BB] to-[#ABE7B2] rounded-2xl rotate-12 opacity-20"
             />
             <motion.div
               animate={{ 
