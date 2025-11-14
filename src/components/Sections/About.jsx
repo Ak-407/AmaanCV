@@ -74,7 +74,7 @@ const About = () => {
             variants={itemVariants}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-[#CBF3BB]/20 to-[#93BFC7]/20 rounded-2xl p-8 backdrop-blur-sm border border-[#ABE7B2]/10">
+            <div className="hidden sm:block bg-gradient-to-br from-[#CBF3BB]/20 to-[#93BFC7]/20 rounded-2xl p-8 backdrop-blur-sm border border-[#ABE7B2]/10">
               <div className="grid grid-cols-2 gap-4">
                 {['AI / ML', 'Django', 'Python', 'Authentication'].map((tech, index) => (
                   <motion.div
