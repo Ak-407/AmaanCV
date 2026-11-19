@@ -72,6 +72,29 @@
     depth to every project. 
   </strong>
 </noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div id="boot-cover" class="opening opening-boot" hidden>
+        <div class="opening-inner">
+          <div class="opening-signature"><img src="%PUBLIC_URL%/imeges/logo.png" alt="" width="48" height="48"><span>Amaan Iqbal</span></div>
+          <div class="opening-title" aria-hidden="true"><span>Port</span><em>folio.</em></div>
+          <div class="opening-progress" role="status">Opening portfolio…</div>
+          <a href="#main">Skip intro ↗</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Display the same cover while the deferred React bundle is on its way.
+      (() => {
+        let show = !location.hash && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+        try {
+          show = show && sessionStorage.getItem('amaan.portfolio.intro.v2') !== 'yes'
+            && localStorage.getItem('amaan.portfolio.pause') !== 'yes';
+        } catch { /* The introduction also works without storage. */ }
+        if (show) {
+          document.getElementById('boot-cover').hidden = false;
+          performance.mark('amaan-cover-start');
+        }
+      })();
+    </script>
   </body>
 </html>

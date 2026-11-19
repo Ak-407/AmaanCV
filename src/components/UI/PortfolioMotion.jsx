@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const introKey = 'amaan.portfolio.intro.v2';
 const motionKey = 'amaan.portfolio.pause';
 const motionQuery = '(prefers-reduced-motion: reduce)';
 
@@ -39,11 +38,12 @@ export function useMotionSettings() {
 }
 
 export function firstVisit() {
-  return !window.location.hash && !saved('sessionStorage', introKey);
+  return !window.location.hash && !!performance.getEntriesByName('amaan-cover-start').length;
 }
 
 export function rememberIntro() {
-  remember('sessionStorage', introKey, true);
+  remember('sessionStorage', 'amaan.portfolio.intro.v2', true);
+  performance.clearMarks('amaan-cover-start');
 }
 
 // The first visit waits for the two visual assets that make up the cover.
@@ -58,7 +58,7 @@ export function OpeningSequence({ onFinish }) {
     node.showModal();
     let active = true;
     let exitTimer;
-    const start = performance.now();
+    const start = performance.getEntriesByName('amaan-cover-start')[0]?.startTime ?? performance.now();
     const picture = document.querySelector('.portrait-photo');
     const assets = [document.fonts?.ready, picture?.decode?.()];
     const settled = assets.map(asset => Promise.resolve(asset).catch(() => {}).then(() => {

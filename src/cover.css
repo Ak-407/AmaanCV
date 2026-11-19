@@ -48,6 +48,8 @@
 /* Two shutters peel away once the cover can be rendered. */
 .opening { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; overflow: hidden; background: transparent; color: var(--cream); }
 .opening[open] { display: grid; place-items: center; }
+.opening-boot:not([hidden]) { display: grid; place-items: center; background: var(--slate); }
+.opening-boot .opening-title { animation: none; }
 .opening::backdrop { background: transparent; }
 .opening-sheet { position: absolute; left: 0; width: 100%; height: 51%; background: var(--slate); }
 .sheet-top { top: 0; }
@@ -59,7 +61,7 @@
 .opening-progress { display: flex; align-items: center; gap: 1rem; font: .75rem var(--mono); }
 .opening-meter { flex: 1; height: 2px; background: var(--line); }
 .opening-meter i { display: block; width: 100%; height: 100%; background: var(--mint); transform-origin: left; transition: transform .35s var(--ease); }
-.opening button { display: inline-flex; gap: .7rem; align-items: center; min-height: 44px; margin-top: .7rem; color: var(--teal); font: .8rem var(--mono); }
+.opening button, .opening-boot a { display: inline-flex; gap: .7rem; align-items: center; min-height: 44px; margin-top: .7rem; color: var(--teal); font: .8rem var(--mono); }
 @media (min-width: 701px) and (max-width: 900px) {
   .hero h1 { font-size: clamp(5.1rem,10.5vw,6.5rem); }
 }
