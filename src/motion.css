@@ -1,0 +1,59 @@
+@keyframes line-up { from { transform: translateY(105%); } }
+@keyframes line-across { from { transform: translate(-15%,100%) rotate(-5deg); } }
+@keyframes enter-right { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0); } }
+@keyframes enter-copy { from { opacity: 0; transform: translateY(18px); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes float-print { 50% { translate: 0 -5px; } }
+@keyframes cover-wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+@keyframes beat { 50% { transform: scaleY(.72); } }
+@keyframes meter { from { transform: scaleX(0); } }
+@keyframes menu-in { from { transform: translateX(100%); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Reveal the hero while the opening shutters are already moving. */
+  :is([data-intro="complete"], .portfolio:has(.opening.leaving)) .type-mask > span { animation: line-up .65s var(--ease) both; }
+  :is([data-intro="complete"], .portfolio:has(.opening.leaving)) .type-mask em { animation: line-across .8s .05s var(--ease) both; }
+  :is([data-intro="complete"], .portfolio:has(.opening.leaving)) .portrait-stage { animation: enter-right .65s var(--ease) both; }
+  :is([data-intro="complete"], .portfolio:has(.opening.leaving)) .hero-copy .actions { animation: enter-copy .55s .1s var(--ease) both; }
+  .photo-print { animation: float-print 5s ease-in-out infinite; transition: transform .32s var(--ease); }
+  .orbit-map b, .about-monogram span { animation: spin 26s linear infinite; }
+  .marquee-track { animation: marquee 28s linear infinite; }
+  .role-strip:hover .marquee-track { animation-play-state: paused; }
+  .in-view { animation: enter-copy .62s var(--ease) both; }
+  .timeline li:nth-child(2), .skill-group:nth-child(2) { animation-delay: .06s; }
+  .timeline li:nth-child(3), .skill-group:nth-child(3) { animation-delay: .12s; }
+  .art-frame .project-art { animation: cover-wipe .4s var(--ease) both; }
+  .voice-wave i { animation: beat 1.4s ease-in-out infinite; animation-delay: calc(var(--beat) * -.15s); }
+  .skill-group[open] .skill-meter i { animation: meter .5s var(--ease) both; }
+  .menu-drawer[open] { animation: menu-in .35s var(--ease) both; }
+  .opening-title { animation: enter-copy .45s var(--ease) both; }
+  .opening-sheet { transition: transform .45s var(--ease); }
+  .opening.leaving .sheet-top { transform: translateY(-101%); }
+  .opening.leaving .sheet-bottom { transform: translateY(101%); }
+  .opening-inner { transition: opacity .2s, transform .28s; }
+  .opening.leaving .opening-inner { opacity: 0; transform: scale(.96); }
+  .contact-orb span { transition: transform .22s var(--ease); }
+  @media (hover: hover) and (pointer: fine) {
+    .portrait-stage:hover .photo-print {
+      transform: perspective(900px) translate(calc(var(--pointer-x, 0) * 18px), calc(var(--pointer-y, 0) * 14px))
+        rotate(5deg) rotateY(calc(var(--pointer-x, 0) * 13deg)) rotateX(calc(var(--pointer-y, 0) * -10deg));
+    }
+    .contact-orb:hover span { transform: translate(calc(var(--pointer-x, 0) * 24px), calc(var(--pointer-y, 0) * 24px)); }
+  }
+}
+/* A persistent manual pause complements the OS preference. All content remains readable. */
+:root[data-motion="off"] { scroll-behavior: auto; }
+:root[data-motion="off"] .portfolio *, :root[data-motion="off"] .portfolio *::before, :root[data-motion="off"] .portfolio *::after {
+  animation: none !important; transition: none !important;
+}
+:root[data-motion="off"] .marquee-track { width: 100%; }
+:root[data-motion="off"] .role-list:first-child { width: 100%; flex-wrap: wrap; justify-content: space-evenly; }
+:root[data-motion="off"] .role-list[aria-hidden="true"] { display: none; }
+:root[data-motion="off"] .role-list li { padding: .55rem; }
+:root[data-motion="off"] .role-list li span { margin-inline: .7rem 0; }
+:root[data-motion="off"] :is(a,button):hover .roll-inner { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

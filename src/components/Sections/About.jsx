@@ -1,13 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useInView, useReducedMotion } from 'framer-motion';
+import { useInView } from 'framer-motion';
 
-function Stat({ value, suffix, label }) {
+function Stat({ value, suffix, label, motionEnabled }) {
   const ref = useRef(null);
   const seen = useInView(ref, { once: true });
-  const reduced = useReducedMotion();
   const [display, setDisplay] = useState(value);
   useEffect(() => {
-    if (!seen || reduced) return;
+    if (!seen || !motionEnabled) return;
     let frame;
     const start = performance.now();
     function tick(now) {
@@ -17,20 +16,20 @@ function Stat({ value, suffix, label }) {
     }
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [seen, reduced, value]);
-  return <div ref={ref}><dt>{label}</dt><dd><span className="sr-only">{value.toLocaleString()}{suffix}</span><span aria-hidden="true">{display.toLocaleString()}{suffix}</span></dd></div>;
+  }, [seen, motionEnabled, value]);
+  return <div ref={ref}><dt>{label}</dt><dd><span className="sr-only">{value.toLocaleString()}{suffix}</span><span aria-hidden="true">{(motionEnabled ? display : value).toLocaleString()}<small>{suffix}</small></span></dd></div>;
 }
 
-export default function About() {
-  return <section id="about" className="section">
-    <h2>About me</h2>
-    <div className="about-grid"><div>
+export default function About({ motionEnabled }) {
+  return <section id="about" className="section paper"><div className="wrap">
+    <div className="about-grid"><div className="about-heading" data-reveal><h2>About <em>me.</em></h2>
+      <div className="about-monogram" aria-hidden="true">Ai<span className="spark" /></div></div><div data-reveal>
       <p className="intro">My first Windows laptop sparked my curiosity. A friend introduced me to Kali Linux, and that curiosity became a career in computer engineering.</p>
       <p>I’m a full stack developer, data scientist, and certified ethical hacker. My work spans university research management systems, job search automation, heart disease prediction, and platforms that connect shopkeepers with customers.</p>
       <p>I also work on video-based education platforms, image detection and segmentation, and AI-driven analytics.</p>
-    </div><dl className="stats">
-      <Stat value={38} suffix="+" label="Projects completed"/><Stat value={4000} suffix="+" label="Hours coding"/>
-      <Stat value={50} suffix="+" label="Security projects"/><Stat value={100} suffix="%" label="AI / ML expertise"/>
-    </dl></div>
-  </section>;
+    </div></div><dl className="stats">
+      <Stat motionEnabled={motionEnabled} value={38} suffix="+" label="Projects completed"/><Stat motionEnabled={motionEnabled} value={4000} suffix="+" label="Hours coding"/>
+      <Stat motionEnabled={motionEnabled} value={50} suffix="+" label="Security projects"/><Stat motionEnabled={motionEnabled} value={100} suffix="%" label="AI / ML expertise"/>
+    </dl>
+  </div></section>;
 }

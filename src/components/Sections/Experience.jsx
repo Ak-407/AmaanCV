@@ -7,9 +7,10 @@ const milestones = [
 ];
 
 export default function Experience() {
-  return <section className="section" id="experience"><h2>Education & experience</h2>
-    <ol className="timeline">{milestones.map(([type, title, org, summary]) => <li key={title}>
-      <span className="eyebrow">{type}</span><div><h3>{title}</h3><b>{org}</b><p>{summary}</p></div>
+  return <section className="section experience-section" id="experience"><div className="wrap experience-layout">
+    <h2 data-reveal>Education &amp; <em>experience.</em></h2>
+    <ol className="timeline">{milestones.map(([type, title, org, summary]) => <li key={title} data-reveal>
+      <span className="small-type">{type} / {org}</span><h3>{title}</h3><p>{summary}</p>
     </li>)}</ol>
-  </section>;
+  </div></section>;
 }

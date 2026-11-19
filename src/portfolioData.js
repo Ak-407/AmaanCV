@@ -1,6 +1,7 @@
 export const projects = [
     {
       title: 'Weather App',
+      id: 'weather', art: 'forecast',
       description: 'A modern weather application with real-time data and beautiful UI',
       technologies: ['React', 'API', 'TailwindCSS'],
       liveLink: 'https://weather-phi-five.vercel.app/',
@@ -8,6 +9,7 @@ export const projects = [
     },
     {
       title: 'Voice Text Converter',
+      id: 'voice', art: 'voice',
       description: 'Convert speech to text and text to speech with advanced features',
       technologies: ['JavaScript', 'Web Speech API', 'CSS3'],
       liveLink: 'https://ak-407.github.io/Voice-Text-Converter-/',
@@ -15,6 +17,7 @@ export const projects = [
     },
     {
       title: 'Chat GPT Clone',
+      id: 'chat', art: 'chat',
       description: 'AI-powered chat application with modern interface',
       technologies: ['React', 'OpenAI API', 'Node.js'],
       liveLink: 'https://ak-407.github.io/Chat-GPT/',
@@ -22,6 +25,7 @@ export const projects = [
     },
     {
       title: 'Personal Portfolio',
+      id: 'portfolio', art: 'folio',
       description: 'Modern portfolio website with smooth animations',
       technologies: ['React', 'Framer Motion', 'TailwindCSS'],
       liveLink: 'https://syedamaan.vercel.app/',
@@ -29,6 +33,7 @@ export const projects = [
     },
     {
       title: 'Blog Platform',
+      id: 'blog', art: 'journal', demoOffline: true,
       description: 'Full-stack blog application with user authentication',
       technologies: ['MongoDB', 'Express', 'React', 'Node.js'],
       liveLink: 'https://blogpost-1b1k.onrender.com/',
@@ -36,6 +41,7 @@ export const projects = [
     },
     {
       title: 'Contact Manager',
+      id: 'contacts', art: 'contacts',
       description: 'Advanced contact management system with CRUD operations',
       technologies: ['React', 'Redux', 'Firebase'],
       liveLink: 'https://ak-407.github.io/Contact-Me/',

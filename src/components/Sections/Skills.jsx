@@ -8,9 +8,15 @@ const groups = [
 ];
 
 export default function Skills() {
-  return <section id="skills" className="section"><h2>Skills</h2>
-    <div className="skill-grid">{groups.map(([title, skills]) => <article key={title}><h3>{title}</h3>
-      <ul className="chips">{skills.map(skill => <li key={skill}>{skill}</li>)}</ul>
-    </article>)}</div>
-  </section>;
+  return <section id="skills" className="section"><div className="wrap skill-layout">
+    <h2 data-reveal>Technical <em>skills.</em></h2>
+    <div className="skill-list">{groups.map(([title, skills], index) => <details key={title} open={index === 0} className="skill-group" data-reveal>
+      <summary><h3>{title}</h3><span aria-hidden="true" className="plus-mark" /></summary>
+      <ul className="skill-items">{skills.map(skill => {
+        const [name, percent] = skill.split(' · ');
+        return <li key={name}>{name}{percent && <><span className="skill-percent">{percent}</span>
+          <span aria-hidden="true" className="skill-meter"><i style={{ width: percent }} /></span></>}</li>;
+      })}</ul>
+    </details>)}</div>
+  </div></section>;
 }
