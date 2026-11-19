@@ -1,0 +1,73 @@
+.work-section { background: var(--slate); }
+.work-layout { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,.86fr); gap: 7%; align-items: start; }
+.work-stage { position: sticky; top: 96px; }
+.art-frame { overflow: hidden; position: relative; border: 1px solid var(--line); }
+.project-art { width: 100%; height: clamp(230px, 46svh, 510px); overflow: hidden; position: relative; isolation: isolate; display: grid; place-items: center; }
+.project-art::after { content: ''; position: absolute; pointer-events: none; inset: 4%; border: 1px solid currentColor; opacity: .23; }
+.work-caption { padding-block: .65rem; color: var(--teal); }
+.work-caption > div { display: flex; gap: .4rem; }
+.work-caption a { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; font-size: 1rem; }
+.work-caption a:is(:hover,:focus-visible) { background: var(--mint); color: var(--navy); }
+.project-entry { display: flex; flex-direction: column; justify-content: center; min-height: clamp(280px, 53svh, 540px); border-top: 1px solid var(--line); padding-block: 2rem; }
+.project-entry:last-child { border-bottom: 1px solid var(--line); }
+.mobile-art { display: none; }
+.project-number { color: var(--teal); }
+.project-entry h3 { font-size: clamp(2.4rem, 4.4vw, 4.3rem); margin: .5rem 0 .8rem; }
+.project-entry p { max-width: 27rem; }
+.project-entry .chips { margin-top: .9rem; }
+.project-entry .links { margin-top: 1.3rem; gap: 1.2rem; color: var(--mint); }
+.project-entry small { color: var(--teal); font-size: .76rem; font-weight: 400; }
+.work-section details { margin-top: 2rem; border-block: 1px solid var(--line); }
+.work-section summary { min-height: 44px; padding: 1rem .1rem; color: var(--mint); font-size: .93rem; }
+.archive { max-width: 700px; margin: 0 auto 1rem; text-align: center; }
+.archive img, .archive video { width: 100%; height: min(46vh, 380px); object-fit: contain; }
+.archive-controls { display: flex; justify-content: space-between; align-items: center; gap: .75rem; margin-top: .8rem; font-size: .8rem; overflow-wrap: anywhere; }
+.archive-controls button { width: 44px; height: 44px; flex: none; border: 1px solid var(--teal); border-radius: 50%; }
+
+/* Each cover has its own silhouette. The poster shapes share the site's six ink colors. */
+.art-forecast { background: var(--mint); color: var(--navy); }
+.weather-sun { width: 33%; aspect-ratio: 1; border-radius: 50%; margin: -8% 0 0 20%; background: var(--navy); }
+.weather-horizon { position: absolute; inset: 52% -5% -20%; background: repeating-linear-gradient(0deg, var(--navy) 0 2px, var(--mint) 2px 9px); border-radius: 52% 50% 0 0; transform: rotate(-9deg); }
+.weather-orbits { position: absolute; inset: 0; }
+.weather-orbits i { position: absolute; width: 75%; height: 40%; top: 21%; left: 12%; border: 1px solid var(--navy); border-radius: 50%; transform: rotate(-18deg); }
+.weather-orbits i:nth-child(2) { transform: rotate(12deg); }
+.weather-orbits i:nth-child(3) { transform: rotate(48deg); }
+.art-voice { background: var(--navy); color: var(--mint); }
+.art-voice::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 7%, var(--line) 7% calc(7% + 1px)); }
+.voice-wave { width: 78%; height: 63%; display: flex; align-items: center; justify-content: center; gap: 1.7%; transform: rotate(-7deg); }
+.voice-wave i { flex: 1; border-radius: 1rem; background: var(--mint); }
+.voice-wave i:nth-child(3n) { background: var(--teal); }
+.art-chat { background: var(--teal); color: var(--navy); }
+.chat-art { position: relative; width: 67%; height: 68%; transform: rotate(-7deg); }
+.chat-art > div { position: absolute; display: flex; align-items: center; justify-content: center; gap: 6%; width: 65%; height: 57%; border: 2px solid var(--navy); border-radius: 18% 18% 3% 18%; }
+.chat-back { top: 0; right: 0; background: var(--cream); }
+.chat-front { left: 0; bottom: 0; background: var(--navy); }
+.chat-art i { width: 8%; aspect-ratio: 1; border-radius: 50%; background: var(--teal); }
+.chat-front i { background: var(--mint); }
+.art-folio { background: var(--cream); color: var(--navy); }
+.folio-preview { position: relative; width: 76%; height: 70%; }
+.folio-preview span { position: absolute; left: 0; top: 15%; color: var(--navy); font: italic 400 clamp(5rem, 13vw, 11.5rem)/1 var(--italic); letter-spacing: -.08em; }
+.folio-preview img { position: absolute; width: 43%; height: 100%; right: 4%; object-fit: cover; border: .35rem solid var(--navy); transform: rotate(9deg); }
+.art-journal { background: var(--teal); color: var(--navy); }
+.journal-print { width: 50%; height: 71%; padding: 4%; border: 2px solid var(--navy); background: var(--cream); box-shadow: 10px 10px 0 var(--navy); overflow: hidden; transform: rotate(-7deg); }
+.journal-print b { display: block; font: italic 400 clamp(2.8rem,7vw,6.5rem)/.95 var(--italic); }
+.journal-print i { display: block; width: 90%; height: 2px; margin-top: 4%; background: var(--navy); }
+.journal-print i:nth-of-type(2) { width: 64%; }
+.journal-print div { height: 40%; margin-top: 6%; background: repeating-linear-gradient(-45deg, var(--mint) 0 7px, var(--navy) 7px 8px); }
+.art-contacts { background: var(--navy); color: var(--teal); }
+.contact-deck { width: 61%; height: 48%; position: relative; transform: rotate(-9deg); }
+.contact-deck > * { position: absolute; inset: 0; border: 2px solid var(--navy); border-radius: 7px; background: var(--mint); }
+.contact-deck > i:first-child { transform: translate(8%, -18%) rotate(8deg); background: var(--teal); }
+.contact-deck > i:nth-child(2) { transform: translate(4%, -9%) rotate(4deg); background: var(--cream); }
+.contact-deck b { position: absolute; top: 25%; left: 10%; width: 25%; aspect-ratio: 1; border: 2px solid var(--navy); border-radius: 50%; }
+.contact-deck span { position: absolute; left: 44%; top: 40%; width: 40%; height: 3px; background: var(--navy); }
+.contact-deck span:last-child { top: 58%; width: 28%; }
+@media (max-width: 700px) {
+  .work-layout { display: block; }
+  .work-stage { display: none; }
+  .mobile-art { display: block; }
+  .project-art { height: auto; aspect-ratio: 1.7; }
+  .project-entry { padding: 0 0 2rem; border-top: 0; min-height: 0; }
+  .project-entry + .project-entry { padding-top: 1rem; }
+  .project-content { padding-top: 1rem; }
+}
