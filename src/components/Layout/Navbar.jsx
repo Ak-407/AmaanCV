@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Arrow, RollingLabel } from '../UI/PortfolioMotion';
+import ThemeSwitch from '../UI/ThemeSwitch';
 
 const sections = [
   ['projects', 'Work'], ['about', 'About'], ['skills', 'Skills'],
   ['experience', 'Experience'], ['contact', 'Contact']
 ];
 
-export default function Navbar({ motion }) {
+export default function Navbar({ motion, theme, onThemeChange }) {
   const [active, setActive] = useState('home');
   const [open, setOpen] = useState(false);
   const menu = useRef(null);
@@ -54,6 +55,7 @@ export default function Navbar({ motion }) {
     </a>
     <nav className="desktop-nav" aria-label="Main">{links(false)}</nav>
     <div className="nav-tools">
+      <ThemeSwitch theme={theme} onChange={onThemeChange} motionEnabled={motion.enabled} />
       {!motion.reduced && <button type="button" className="motion-switch" onClick={motion.toggle}
         aria-label="Pause animations" aria-pressed={!motion.enabled} title={motion.enabled ? 'Pause animations' : 'Resume animations'}>
         <span aria-hidden="true" className={motion.enabled ? 'pause-mark' : 'resume-mark'} />

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Arrow, followPointer, resetPointer } from '../UI/PortfolioMotion';
+import SmokeSurface from '../UI/SmokeSurface';
 
-export default function Contact() {
-  return <section className="section contact-section" id="contact"><div className="wrap">
+export default function Contact({ effects, theme }) {
+  return <section className="section contact-section" id="contact"><SmokeSurface enabled={effects} theme={theme} /><div className="wrap">
     <p className="small-type">Contact</p>
     <div className="contact-head"><h2 data-reveal>Let’s <em>talk.</em></h2>
       <a className="contact-orb" aria-label="Email Amaan Iqbal" href="mailto:amaaniqbal3k@gmail.com"

@@ -7,11 +7,14 @@ import Experience from './components/Sections/Experience';
 import Projects from './components/Sections/Projects';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Layout/Footer';
+import InkCursor from './components/UI/InkCursor';
 import { firstVisit, OpeningSequence, rememberIntro, useMotionSettings } from './components/UI/PortfolioMotion';
 
 export default function App() {
   const motion = useMotionSettings();
   const [intro, setIntro] = useState(() => motion.enabled && firstVisit());
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'dark');
+  const effects = motion.enabled && !intro;
   const finishIntro = useCallback(() => {
     rememberIntro();
     setIntro(false);
@@ -51,12 +54,13 @@ export default function App() {
 
   return <div className="portfolio" data-intro={intro ? 'opening' : 'complete'}>
     <a className="skip" href="#main">Skip to content</a>
-    <Navbar motion={motion} />
+    <Navbar motion={motion} theme={theme} onThemeChange={setTheme} />
     <main id="main">
-      <Hero /><RoleMarquee />
-      <Projects /><About motionEnabled={motion.enabled} /><Skills /><Experience /><Contact />
+      <Hero effects={effects} theme={theme} /><RoleMarquee />
+      <Projects /><About motionEnabled={motion.enabled} /><Skills /><Experience /><Contact effects={effects} theme={theme} />
     </main>
     <Footer replay={motion.enabled ? () => setIntro(true) : null} />
+    <InkCursor enabled={effects} />
     {intro && motion.enabled && <OpeningSequence onFinish={finishIntro} />}
   </div>;
 }

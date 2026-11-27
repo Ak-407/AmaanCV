@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import { Arrow, followPointer, resetPointer, RollingLabel } from '../UI/PortfolioMotion';
+import SmokeSurface from '../UI/SmokeSurface';
 
 const base = process.env.PUBLIC_URL;
 const roles = ['Full stack development', 'Machine learning', 'Web security', 'Founder of JKStream'];
 
-function Portrait() {
+function Portrait({ effects, theme }) {
   const film = useRef(null);
   const video = useRef(null);
 
@@ -22,7 +23,9 @@ function Portrait() {
         <img className="portrait-photo" alt="Amaan Iqbal beside the window in a sunlit corridor"
         src={base + '/assets/amaan-800.webp'} width="800" height="1019" fetchpriority="high"
         srcSet={base + '/assets/amaan-480.webp 480w, ' + base + '/assets/amaan-800.webp 800w'}
-        sizes="(max-width: 700px) 72vw, (max-width: 1000px) 36vw, 360px" /></picture></div>
+        sizes="(max-width: 700px) 72vw, (max-width: 1000px) 36vw, 360px" /></picture>
+        <SmokeSurface enabled={effects} theme={theme} portrait />
+      </div>
       <figcaption><span>Amaan Iqbal</span><span>Portrait</span></figcaption>
     </figure>
     <button className="film-trigger" type="button" onClick={playFilm} aria-haspopup="dialog">
@@ -38,8 +41,9 @@ function Portrait() {
   </div>;
 }
 
-export default function Hero() {
+export default function Hero({ effects, theme }) {
   return <section id="home" className="hero" aria-labelledby="cover-title">
+    <SmokeSurface enabled={effects} theme={theme} />
     <div className="wrap hero-grid">
       <div className="hero-copy">
         <p className="byline"><span className="byline-rule" /> Amaan Iqbal <span className="byline-slash">/</span> Kashmir, India</p>
@@ -51,7 +55,7 @@ export default function Hero() {
         <div className="actions"><a className="button primary" download href={base + '/assets/Amaan-Iqbal-CV.pdf'}><RollingLabel>Download CV</RollingLabel><Arrow direction="down" /></a>
           <a className="button button-line" href="#contact"><RollingLabel>Contact me</RollingLabel><Arrow /></a></div>
       </div>
-      <Portrait />
+      <Portrait effects={effects} theme={theme} />
     </div>
     <div className="wrap cover-foot"><a href="#projects"><span className="scroll-glyph" aria-hidden="true">↓</span> Explore my work</a>
       <div><a href="https://github.com/Ak-407">GitHub <Arrow /></a><a href="https://www.linkedin.com/in/mir-amaan-88b250226/">LinkedIn <Arrow /></a></div></div>
