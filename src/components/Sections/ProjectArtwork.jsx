@@ -15,7 +15,10 @@ export default function ProjectArtwork({ kind }) {
       contents = <div className="chat-art"><div className="chat-back"><i /><i /><i /></div><div className="chat-front"><i /><i /><i /></div></div>;
       break;
     case 'folio':
-      contents = <div className="folio-preview"><span>Aa</span><img alt="" loading="lazy" width="480" height="611" src={process.env.PUBLIC_URL + '/assets/amaan-480.webp'} /></div>;
+      contents = <div className="folio-preview"><span>Aa</span><picture>
+        <source type="image/avif" srcSet={process.env.PUBLIC_URL + '/assets/amaan-cover.avif'} />
+        <img alt="" loading="lazy" width="480" height="611" src={process.env.PUBLIC_URL + '/assets/amaan-480.webp'} />
+      </picture></div>;
       break;
     case 'journal':
       contents = <div className="journal-print"><b>Aa.</b><i /><i /><div /></div>;

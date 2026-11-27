@@ -6,6 +6,7 @@ import './index.css';
 import './cover.css';
 import './work.css';
 import './motion.css';
+import './ink.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

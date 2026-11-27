@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { media, projects } from '../../portfolioData';
 import ProjectArtwork from './ProjectArtwork';
-import { Arrow, RollingLabel } from '../UI/PortfolioMotion';
+import { Arrow, followPointer, resetPointer, RollingLabel } from '../UI/PortfolioMotion';
 
 function MediaArchive() {
   const [open, setOpen] = useState(false);
@@ -57,7 +57,14 @@ export default function Projects() {
   return <section className="section work-section" id="projects"><div className="wrap">
     <div className="section-heading" data-reveal><h2>Selected <em>work.</em></h2><span className="small-type">{projects.length} projects</span></div>
     <div className="work-layout">
-      <div className="work-stage"><div className="art-frame"><ProjectArtwork key={active} kind={projects[active].art} /></div>
+      <div className="work-stage"><div className="art-frame" onPointerMove={followPointer} onPointerLeave={resetPointer}>
+        <ProjectArtwork key={active} kind={projects[active].art} />
+        <svg className="lens-filter" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+          <filter id="water-lens"><feTurbulence type="fractalNoise" baseFrequency=".026 .045" numOctaves="2" result="ripples" />
+            <feDisplacementMap in="SourceGraphic" in2="ripples" scale="16" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs></svg>
+      </div>
         <div className="work-caption"><span>{String(active + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}</span>
           <div>{projectStep(-1)}{projectStep(1)}</div></div>
       </div>

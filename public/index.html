@@ -5,9 +5,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/imeges/logo.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/imeges/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#CBF3BB" />
+    <meta name="theme-color" content="#0f172a" />
+    <script>
+      // Use the saved paper/ink choice for the very first paint, including the intro.
+      (() => {
+        let theme = 'dark';
+        try { if (localStorage.getItem('amaan.portfolio.theme') === 'light') theme = 'light'; } catch {}
+        document.documentElement.dataset.theme = theme;
+        if (theme === 'light') document.querySelector('meta[name="theme-color"]').content = '#ECF4E8';
+      })();
+    </script>
     
-    <link rel="preload" as="image" type="image/avif" href="%PUBLIC_URL%/assets/amaan-cover.avif" />
+    <link rel="preload" as="image" type="image/avif" fetchpriority="high" href="%PUBLIC_URL%/assets/amaan-cover.avif" />
     <!-- Primary SEO Meta Tags -->
     <meta name="title" content="Amaan Iqbal | JKStream Founder & Cyber Security Expert" />
     <meta name="description" content="Amaan is the founder of JKStream startup and a renowned cyber security expert. Professional full stack developer specializing in React, Node.js, ethical hacking, and web application security." />
