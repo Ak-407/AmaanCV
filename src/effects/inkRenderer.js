@@ -6,14 +6,29 @@ export function createInkRenderer(canvas, portrait, coarse) {
   const ctx = canvas.getContext('2d');
   if (!ctx) return null;
   const style = getComputedStyle(canvas);
-  const colors = ['--smoke-low', '--smoke-high', '--print-wash'].map(name => {
+  function color(name) {
     const hex = style.getPropertyValue(name).trim().slice(1);
     return [0, 2, 4].map(offset => parseInt(hex.slice(offset, offset + 2), 16));
-  });
-  const glints = document.documentElement.dataset.theme === 'dark';
+  }
+  const palettes = {
+    dark: [color('--smoke-dark-low'), color('--smoke-dark-high'), color('--navy')],
+    light: [color('--smoke-light-low'), color('--smoke-light-high'), color('--cream')]
+  };
+  let theme = document.documentElement.dataset.theme || 'dark';
   let worker = null, field = null, busy = false, revision = 0;
+  let lastFrame = null, localCanvas = null;
   let drops = [], box = null;
 
+  function releaseFrame() {
+    lastFrame?.close?.();
+    lastFrame = null;
+  }
+  function present() {
+    if (!lastFrame) return;
+    const { width, height } = canvas;
+    ctx.clearRect(0, 0, width, height);
+    ctx.drawImage(lastFrame, 0, theme === 'light' ? height : 0, width, height, 0, 0, width, height);
+  }
   function resize(bounds) {
     box = bounds;
     const workerSize = portrait ? 168 : 244;
@@ -23,11 +38,15 @@ export function createInkRenderer(canvas, portrait, coarse) {
     const height = Math.max(8, Math.round(bounds.height * scale));
     revision++;
     drops = [];
+    releaseFrame();
     canvas.width = width;
     canvas.height = height;
-    const setup = { type: 'setup', width, height, portrait, colors, glints };
+    const setup = { type: 'setup', width, height, portrait, palettes };
     if (worker) worker.postMessage(setup);
-    else field = createInkField(canvas, setup);
+    else {
+      localCanvas ||= document.createElement('canvas');
+      field = createInkField(localCanvas, setup);
+    }
   }
   function localFallback() {
     worker?.terminate();
@@ -41,10 +60,10 @@ export function createInkRenderer(canvas, portrait, coarse) {
       worker.onmessage = ({ data }) => {
         busy = false;
         if (revision === data.revision) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(data.bitmap, 0, 0);
-        }
-        data.bitmap.close();
+          releaseFrame();
+          lastFrame = data.bitmap;
+          present();
+        } else data.bitmap.close();
       };
       worker.onerror = event => {
         event.preventDefault();
@@ -54,6 +73,10 @@ export function createInkRenderer(canvas, portrait, coarse) {
   }
   return {
     resize,
+    setTheme(next) {
+      theme = next;
+      present();
+    },
     deposit(...drop) { if (drops.length < 8) drops.push(drop); },
     draw(step, elapsed, development) {
       if (worker) {
@@ -63,14 +86,24 @@ export function createInkRenderer(canvas, portrait, coarse) {
       } else if (field) {
         for (const drop of drops) field.deposit(...drop);
         field.draw(step, elapsed, development);
+        lastFrame = localCanvas;
+        present();
       }
       drops = [];
     },
     clear() {
       revision++;
       drops = [];
+      releaseFrame();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     },
-    dispose() { worker?.terminate(); }
+    dispose() {
+      revision++;
+      if (worker) {
+        worker.onerror = null;
+        worker.terminate();
+      }
+      releaseFrame();
+    }
   };
 }

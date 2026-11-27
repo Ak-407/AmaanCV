@@ -1,15 +1,15 @@
 /* Ink and paper reuse the portfolio pigments. The artwork and media keep their own colors. */
 :root {
   --page: var(--navy);
-  --smoke-low: var(--teal);
-  --smoke-high: var(--light-mint);
+  --smoke-dark-low: var(--teal);
+  --smoke-dark-high: var(--light-mint);
+  --smoke-light-low: var(--navy);
+  --smoke-light-high: var(--teal);
   --print-wash: var(--navy);
   color-scheme: dark;
 }
 :root[data-theme="light"] {
   --page: var(--cream);
-  --smoke-low: var(--navy);
-  --smoke-high: var(--teal);
   --print-wash: var(--cream);
   --line: rgba(26, 31, 46, .22);
   color: var(--navy);
@@ -62,7 +62,13 @@
   [data-motion="on"] [data-intro="opening"] .print-wash { background-color: var(--print-wash); }
   [data-motion="on"] [data-intro="complete"] .print-wash { animation: prepare-print .35s ease-out both; }
 }
-.contact-section { position: relative; isolation: isolate; --smoke-low: var(--teal); --smoke-high: var(--navy); }
+.contact-section {
+  position: relative;
+  isolation: isolate;
+  --smoke-dark-high: var(--navy);
+  --smoke-light-low: var(--teal);
+  --smoke-light-high: var(--navy);
+}
 .lens-filter { position: absolute; pointer-events: none; }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   [data-motion="on"] .art-frame::after {

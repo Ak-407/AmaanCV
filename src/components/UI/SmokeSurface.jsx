@@ -1,10 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { createInkRenderer } from '../../effects/inkRenderer';
 
 const clamp = value => Math.min(1, Math.max(0, value));
 
 export default function SmokeSurface({ enabled, theme, portrait = false }) {
   const ref = useRef(null);
+  const renderer = useRef(null);
+  useLayoutEffect(() => {
+    renderer.current?.setTheme(theme);
+  }, [theme]);
+
   useEffect(() => {
     if (!enabled || !window.IntersectionObserver) return;
     const canvas = ref.current;
@@ -22,7 +27,10 @@ export default function SmokeSurface({ enabled, theme, portrait = false }) {
       if (field && width === host.clientWidth && height === host.clientHeight) return;
       width = host.clientWidth;
       height = host.clientHeight;
-      if (!field) field = createInkRenderer(canvas, portrait, coarse);
+      if (!field) {
+        field = createInkRenderer(canvas, portrait, coarse);
+        renderer.current = field;
+      }
       if (!field) return;
       field.resize({ width, height });
       if (!portrait) {
@@ -45,7 +53,8 @@ export default function SmokeSurface({ enabled, theme, portrait = false }) {
       const interval = !portrait && !position && elapsed - lastDeposit > .8 ? frameInterval * 1.5 : frameInterval;
       const remaining = interval - (now - painted);
       if (remaining > 1) { wake(remaining); return; }
-      const dt = painted ? Math.min(.1, (now - painted) / 1000) : frameInterval / 1000;
+      const frameSeconds = painted ? (now - painted) / 1000 : frameInterval / 1000;
+      const dt = Math.min(.1, frameSeconds);
       painted = now;
       elapsed += dt;
       if (position) {
@@ -68,7 +77,7 @@ export default function SmokeSurface({ enabled, theme, portrait = false }) {
           lastDeposit = elapsed;
         }
         scrollDistance = 0;
-        develop = Math.min(1, develop + dt * .67);
+        develop = Math.min(1, develop + frameSeconds * .67);
       } else if (elapsed - lastDeposit > 3.2) {
         const angle = ++ambientIndex * 2.4;
         field.deposit(.53 + Math.cos(angle) * .37, .55 + Math.sin(angle) * .32, .23, 1.35);
@@ -131,6 +140,7 @@ export default function SmokeSurface({ enabled, theme, portrait = false }) {
       sizes?.disconnect();
       window.removeEventListener('resize', resize);
       field?.dispose();
+      renderer.current = null;
       host.removeEventListener('pointermove', stir);
       host.removeEventListener('pointerdown', stir);
       host.removeEventListener('pointerleave', leave);
@@ -138,6 +148,6 @@ export default function SmokeSurface({ enabled, theme, portrait = false }) {
       document.removeEventListener('visibilitychange', visibility);
       canvas.width = canvas.height = 1;
     };
-  }, [enabled, theme, portrait]);
+  }, [enabled, portrait]);
   return <canvas ref={ref} width="1" height="1" aria-hidden="true" className={portrait ? 'print-wash' : 'smoke-surface'} />;
 }
