@@ -33,13 +33,14 @@
   --teal: #93BFC7;
   --line: rgba(171, 231, 178, 0.2);
   --glass: rgba(236, 244, 232, 0.1);
+  --ui-font: Inter, system-ui, sans-serif;
   --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
   --italic: 'Instrument Serif', Georgia, serif;
   --mono: ui-monospace, 'Courier New', monospace;
   --ease: cubic-bezier(.2,.7,.25,1);
   color: var(--cream);
   background: var(--navy);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: var(--ui-font);
   scroll-behavior: smooth;
   scroll-padding-top: 86px;
 }
@@ -92,13 +93,13 @@ h3 { font: 700 clamp(1.8rem, 3.3vw, 3.25rem)/1.02 var(--display); letter-spacing
 
 /* Navigation and the mobile drawer share the same section anchors. */
 .site-header { position: sticky; top: 0; z-index: 10; background: var(--navy); border-bottom: 1px solid var(--line); }
-.navrow { min-height: 70px; }
-.brand { display: inline-flex; align-items: center; gap: .65rem; font-size: 1.11rem; font-weight: 700; letter-spacing: -.04em; }
+.navrow { min-height: 70px; font-family: var(--ui-font); }
+.brand { white-space: nowrap; display: inline-flex; align-items: center; gap: .65rem; font-size: 1.11rem; font-weight: 700; letter-spacing: -.04em; }
 .brand img { object-fit: contain; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(1.2rem, 2.8vw, 3rem); margin-left: auto; }
-.desktop-nav a { position: relative; font-size: .87rem; padding: .7rem 0; }
+.desktop-nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; font: 550 .95rem/1.4 var(--ui-font); padding: .55rem 0; }
 .desktop-nav a::after { content: ''; display: block; position: absolute; bottom: 1px; left: 0; right: 0; height: 2px; background: var(--mint); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
-.desktop-nav a:is([aria-current],:hover)::after { transform: scaleX(1); }
+.desktop-nav a:is([aria-current],:hover,:focus-visible)::after { transform: scaleX(1); }
 .nav-tools { flex-wrap: nowrap; gap: .65rem; }
 .motion-switch, .menu-trigger { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 44px; border: 1px solid var(--line); }
 .motion-switch { width: 44px; border-radius: 50%; }
@@ -113,7 +114,8 @@ h3 { font: 700 clamp(1.8rem, 3.3vw, 3.25rem)/1.02 var(--display); letter-spacing
 .drawer-top { padding-bottom: 1rem; border-bottom: 1px solid currentColor; }
 .drawer-top button, .film-bar button { min-height: 44px; padding-inline: .4rem; }
 .drawer-inner nav { display: grid; }
-.drawer-inner nav a { display: flex; align-items: center; justify-content: space-between; padding: .43rem 0; font: 700 clamp(2.6rem, 10vw, 4.2rem)/1 var(--display); }
+.drawer-inner nav a { display: flex; align-items: center; justify-content: space-between; padding: .43rem 0; min-height: 48px; font: 620 clamp(1.75rem, 6.6vw, 2.65rem)/1.25 var(--ui-font); letter-spacing: -.035em; }
+.drawer-inner nav a[aria-current] > span { text-decoration: underline; text-underline-offset: .18em; }
 .drawer-inner nav a:last-child { border-bottom: 1px solid currentColor; padding-bottom: 1rem; }
 .drawer-inner nav .arrow { font-size: 1.35rem; }
 .drawer-email { margin-top: auto; text-decoration: underline; text-underline-offset: .3em; }

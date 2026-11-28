@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Arrow, RollingLabel } from '../UI/PortfolioMotion';
+import { Arrow } from '../UI/PortfolioMotion';
 import ThemeSwitch from '../UI/ThemeSwitch';
 
 const sections = [
@@ -14,7 +14,7 @@ export default function Navbar({ motion, theme, onThemeChange }) {
   const progress = useRef(null);
 
   useEffect(() => {
-    const nodes = sections.map(([id]) => document.getElementById(id));
+    const nodes = sections.map(([id]) => document.getElementById(id)).filter(Boolean);
     let frame = 0;
     function measure() {
       frame = 0;
@@ -26,11 +26,14 @@ export default function Navbar({ motion, theme, onThemeChange }) {
     }
     function schedule() { if (!frame) frame = requestAnimationFrame(measure); }
     measure();
+    const sizes = window.ResizeObserver ? new ResizeObserver(schedule) : null;
+    sizes?.observe(document.body);
     window.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('resize', schedule);
     return () => {
       window.removeEventListener('scroll', schedule);
       window.removeEventListener('resize', schedule);
+      sizes?.disconnect();
       cancelAnimationFrame(frame);
     };
   }, []);
@@ -45,7 +48,7 @@ export default function Navbar({ motion, theme, onThemeChange }) {
   function links(inMenu) {
     return sections.map(([id, label]) => <a key={id} href={'#' + id} aria-current={active === id ? 'location' : undefined}
       onClick={inMenu ? () => menu.current.close() : undefined}>
-      <RollingLabel>{label}</RollingLabel>{inMenu && <Arrow />}
+      <span>{label}</span>{inMenu && <Arrow />}
     </a>);
   }
 
