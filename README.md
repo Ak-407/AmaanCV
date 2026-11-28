@@ -15,6 +15,6 @@ Run `npm run build`. The static site is written to `build/`. Relative asset URLs
 
 ## Updating the CV
 
-The page sections live in `src/components/Sections/`. Edit project descriptions and links in `src/portfolioData.js`. The two unconfirmed project repositories have clearly labeled placeholders. Original media remain under `public/imeges/` and `public/ss/`. Responsive portrait copies and the downloadable résumé are in `public/assets/`. Update the PDF when the résumé changes.
+The page sections live in `src/components/Sections/`. Edit project descriptions and links in `src/portfolioData.js`. Projects can be searched by name or technology and filtered to live demos. The Blog Platform lists its demo as offline and its source link as pending. Original media remain under `public/imeges/` and `public/ss/`. Responsive portrait copies and the downloadable résumé are in `public/assets/`. Update the PDF when the résumé changes.
 
 The social preview and canonical URL in `public/index.html` use the existing miramaan.vercel.app domain. Update them if the primary deployment changes.

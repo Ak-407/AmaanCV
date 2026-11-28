@@ -21,13 +21,15 @@
 [data-theme="light"] .paper { background: var(--light-mint); }
 [data-theme="light"] :is(.footer-row, .byline, .cover-foot, .work-caption, .project-number, .project-entry small, .timeline .small-type, .section-heading .small-type, .opening button, .opening-boot a) { color: var(--slate); }
 [data-theme="light"] :is(.type-mask em, .lede strong, .scroll-glyph, .byline-slash, .skill-layout h2 em, .experience-layout h2 em, .skill-percent, .work-section summary, .project-entry .links, .opening, .opening-title em) { color: var(--navy); }
-[data-theme="light"] :is(.byline-rule, .reading-progress, .skill-meter i, .timeline li::before, .opening-meter i, .desktop-nav a::after, .plus-mark::before, .plus-mark::after) { background: var(--navy); }
+[data-theme="light"] :is(.byline-rule, .reading-progress, .skill-meter i, .opening-meter i),
+[data-theme="light"] .timeline li::before, [data-theme="light"] .desktop-nav a::after,
+[data-theme="light"] .plus-mark::before, [data-theme="light"] .plus-mark::after { background: var(--navy); }
 [data-theme="light"] .skill-meter { background: var(--teal); }
 [data-theme="light"] :is(.motion-switch, .menu-trigger, .cover-foot a):hover { color: var(--navy); }
 [data-theme="light"] :is(.brand, .opening-signature) img { background: var(--navy); border-radius: .2rem; }
 [data-theme="light"] .orbit-map b { color: var(--teal); }
 .theme-switch { display: inline-flex; min-height: 44px; min-width: 44px; gap: .55rem; align-items: center; justify-content: center; padding-inline: .25rem; }
-.theme-label { font: 600 .7rem/1.1 var(--mono); }
+.theme-label { font: 550 .875rem/1.4 var(--ui-font); white-space: nowrap; }
 .theme-track { position: relative; width: 37px; height: 21px; border-radius: 20px; border: 1px solid currentColor; color: var(--teal); }
 .theme-track i { position: absolute; top: 3px; left: 3px; width: 13px; height: 13px; border-radius: 50%; background: currentColor; transition: transform .25s var(--ease); }
 .theme-switch[aria-checked="true"] .theme-track i { transform: translateX(15px); background: var(--mint); }

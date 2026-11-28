@@ -2,15 +2,15 @@ export const projects = [
     {
       title: 'Weather App',
       id: 'weather', art: 'forecast',
-      description: 'A modern weather application with real-time data and beautiful UI',
-      technologies: ['React', 'API', 'TailwindCSS'],
+      description: 'Current conditions, six hourly readings and a seven-day forecast, with saved cities and Celsius or Fahrenheit',
+      technologies: ['React', 'Open-Meteo', 'Geolocation'],
       liveLink: 'https://weather-phi-five.vercel.app/',
-      githubLink: ''
+      githubLink: 'https://github.com/Ak-407/Weather'
     },
     {
       title: 'Voice Text Converter',
       id: 'voice', art: 'voice',
-      description: 'Convert speech to text and text to speech with advanced features',
+      description: 'Dictate and edit a transcript, listen at your own speed, and export a text file',
       technologies: ['JavaScript', 'Web Speech API', 'CSS3'],
       liveLink: 'https://ak-407.github.io/Voice-Text-Converter-/',
       githubLink: 'https://github.com/Ak-407/Voice-Text-Converter-'
@@ -18,17 +18,17 @@ export const projects = [
     {
       title: 'Chat GPT Clone',
       id: 'chat', art: 'chat',
-      description: 'AI-powered chat application with modern interface',
-      technologies: ['React', 'OpenAI API', 'Node.js'],
+      description: 'Enquire runs an optional AI model on your device and offers saved conversations, summaries and checklists',
+      technologies: ['JavaScript', 'Transformers.js', 'WebAssembly'],
       liveLink: 'https://ak-407.github.io/Chat-GPT/',
       githubLink: 'https://github.com/Ak-407/Chat-GPT'
     },
     {
       title: 'Personal Portfolio',
       id: 'portfolio', art: 'folio',
-      description: 'Modern portfolio website with smooth animations',
+      description: 'Animated CV, searchable projects, and a motion-aware dark and light theme',
       technologies: ['React', 'Framer Motion', 'TailwindCSS'],
-      liveLink: 'https://syedamaan.vercel.app/',
+      liveLink: 'https://miramaan.vercel.app/',
       githubLink: 'https://github.com/Ak-407/AmaanCV'
     },
     {
@@ -42,8 +42,8 @@ export const projects = [
     {
       title: 'Contact Manager',
       id: 'contacts', art: 'contacts',
-      description: 'Advanced contact management system with CRUD operations',
-      technologies: ['React', 'Redux', 'Firebase'],
+      description: 'A personal address book with search, favorites and vCard export, plus a way to message me',
+      technologies: ['JavaScript', 'Express', 'MongoDB'],
       liveLink: 'https://ak-407.github.io/Contact-Me/',
       githubLink: 'https://github.com/Ak-407/Contact-Me'
     }
